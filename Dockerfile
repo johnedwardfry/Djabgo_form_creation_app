@@ -10,17 +10,17 @@ FROM python:latest
 # This does not allow python to create files locally allowing for a clean and stateless environment
 ENV PYTHONDONTWRITEBYTECODE=true
 
-# This putputs stdout and stderr straight to terminal this prevents the loss of output in case python crashes
+# This puts stdout and stderr straight to terminal this prevents the loss of output in case python crashes
 ENV PYTHONUNBUFFERED=true
 
 # WORKDIR instruction sets the working directory for any RUN, CMD, ENTRYPOINT, COPY and ADD instructions that follow it
-# in the Dockerfile. this is reccomended as if it is not set you will have to specify the directory by running the cd
+# in the Dockerfile. this is recommended as if it is not set you will have to specify the directory by running the cd
 # command each time you use these commands.
 WORKDIR /code
 
 # This command will copy the code that is in the location of the DOCKERFILE into the /code directory inside the
-# container this allows the code to run in an isolated container and will be accessed by the dockercompose.yaml to build
-# our webapp
+# container this allows the code to run in an isolated container and will be accessed by the docker compose.yaml to
+# build our webapp
 COPY . /code/
 
 # This runs a command in the os because we are using a linux base image these will be bash commands in this case it is

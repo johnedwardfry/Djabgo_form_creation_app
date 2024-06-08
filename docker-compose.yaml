@@ -20,7 +20,7 @@ services:
     env_file: .env
 
     # this section is commented out because we want a stateless environment which rebuilds the database each time the
-    # application is built you can specify volumes here but you would want to mount them in the dockerfile if you need
+    # application is built you can specify volumes here, but you would want to mount them in the dockerfile if you need
     # to use cloud components like AWS cli
     # example:
     # - $HOST_DIR:$TARGET_DIR
@@ -39,7 +39,7 @@ services:
         test: ["CMD", "pg_isready -U $POSTGRES_USER"]
 
         # how long it should wait before running and between retrys
-        interval: 105s
+        interval: 10s
 
         # how long to wait untill the health check as been considered to be a failure
         timeout: 10s
