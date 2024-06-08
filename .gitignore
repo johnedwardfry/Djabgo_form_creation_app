@@ -98,14 +98,14 @@ celerybeat-schedule.*
 *.sage.py
 
 # Environments
-.env
+../Django_cybersecurity_form creation/.env
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
-
+.env
 # mkdocs documentation
 /site
 
@@ -136,3 +136,7 @@ GitHub.sublime-settings
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
+.idea/misc.xml
+.idea/Django_form_creation_app.iml
+/.idea
+/.idea

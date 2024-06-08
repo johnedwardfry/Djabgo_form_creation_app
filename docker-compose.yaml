@@ -36,7 +36,7 @@ services:
       # Check if the database is ready
       # use the POSTGRES_USER and POSTGRES_PASSWORD environment variables to connect
 
-        test: ["CMD-SHELL", "pg_isready -U $POSTGRES_USER"]
+        test: ["CMD", "pg_isready -U $POSTGRES_USER"]
 
         # how long it should wait before running and between retrys
         interval: 10s
